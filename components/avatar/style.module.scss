@@ -1,0 +1,73 @@
+.avatar{
+  border-radius: 8px;
+  cursor: pointer;
+  //overflow: hidden;
+  position: relative;
+  &__fourty{
+    width: 40px;
+    height: 40px;
+  }
+  &__thirty{
+    width: 32px;
+    height: 32px;
+  }
+  &__symbol{
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+  }
+  &__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__circle{
+    border-radius: 50%;
+  }
+  &__square{
+    border-radius: 4px;
+  }
+  &__color{
+    background-color: darkgreen;
+  }
+  &__online{
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 0;
+    bottom: 0;
+    &::before{
+      content: '';
+      border-radius: 50%;
+      background-color: #2ea83a;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .avatar{
+    &__symbol{
+      font-size: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .avatar{
+    &__fourty{
+      width: 30px;
+      height: 30px;
+    }
+    &__symbol{
+      font-size: 15px;
+    }
+  }
+}

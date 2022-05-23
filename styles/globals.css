@@ -1,0 +1,110 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f2f2f2;
+  min-width: 320px;
+  height: 100%;
+}
+
+#__next{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main{
+  flex-grow: 1;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul, li{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.container{
+  max-width: 980px;
+  padding: 0 10px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-direction-column{
+  flex-direction: column;
+}
+
+.flex-direction-row{
+  flex-direction: row;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.justify-content-between{
+  justify-content: space-between;
+}
+
+.justify-content-end{
+  justify-content: flex-end;
+}
+
+.justify-content-around{
+  justify-content: space-around;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.align-items-end{
+  align-items: end;
+}
+
+*::-webkit-scrollbar {
+   width: 6px;
+ }
+
+*::-webkit-scrollbar-track {
+   background: #f1f1f1;
+ }
+*::-webkit-scrollbar-thumb {
+   background: #999;
+   border-radius: 6px;
+ }
+
+@media screen and (max-width: 998px){
+  .container{
+    max-width: 660px;
+  }
+}
+
+@media screen and (max-width: 860px) {}
+
+@media screen and (max-width: 720px) {
+  html, body{
+    font-size: 14px;
+  }
+}
+

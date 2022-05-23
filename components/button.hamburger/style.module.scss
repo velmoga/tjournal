@@ -1,0 +1,27 @@
+.button_hamburger{
+  min-width: 24px;
+  height: 24px;
+  padding: 3px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  opacity: 1;
+  transition: opacity .25s ease-in;
+  display: inline-block;
+  &:hover{
+    opacity: .5;
+  }
+  &__line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-bottom: 4px;
+    position: relative;
+    background: #000;
+    border-radius: 3px;
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+}

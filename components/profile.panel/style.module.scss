@@ -1,0 +1,130 @@
+.profile_panel{
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px 20px 0 20px;
+  overflow: hidden;
+  position: relative;
+  &__frame{
+    position: static;
+  }
+  &__head_frame{
+    padding-top: 180px;
+  }
+  &__cover_frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 280px;
+    &:hover{
+      .profile_panel__cover_btn{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  &__cover_img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__cover_btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .25s ease-in, transform .25s ease-in;
+  }
+  &__avatar{
+    width: 112px;
+    height: 112px;
+    background-color: darkgreen;
+    color: #fff;
+    font-size: 50px;
+    border-radius: 6px;
+    border: 3px #fff solid;
+    z-index: 10;
+  }
+  &__fullname{
+    padding: 15px 0;
+  }
+  &__name{
+    font-size: 30px;
+    font-weight: 600;
+  }
+  &__describe{
+    margin-bottom: 10px;
+    color: #4683d9;
+    transition: color .25s ease-in;
+    font-size: 18px;
+    &:hover{
+      color: darkred;
+      font-size: 18px;
+    }
+  }
+  &__subs{
+    margin-bottom: 5px;
+  }
+  &__action{
+    gap: 8px;
+    margin-bottom: 8px;
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    &__image{
+      top: 300px;
+    }
+  }
+  &__nav{
+    margin-top: 5px;
+    margin-left: -18px;
+  }
+  &__link{
+    font-size: 16px;
+    height: 60px;
+    margin: 0 18px;
+    position: relative;
+    &__active{
+      &::before{
+        content: '';
+        position: absolute;
+        background-color: #4683d9;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+      }
+    }
+  }
+  &__file{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 998px){
+  .profile_panel{
+    &__action{
+      position: static;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .profile_panel{
+    &__head_frame{
+      padding-top: 125px;
+    }
+    &__cover_frame{
+      max-height: 225px;
+    }
+  }
+}
+

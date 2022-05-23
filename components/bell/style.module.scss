@@ -1,0 +1,14 @@
+.bell{
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+  &__path{
+    fill: #000;
+    transition: fill .25s ease-in;
+  }
+  &:hover{
+    .bell__path{
+      fill: #e9b649 ;
+    }
+  }
+}

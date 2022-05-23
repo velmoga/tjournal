@@ -1,0 +1,126 @@
+.popup_registration{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  padding: 36px 16px;
+  z-index: 20;
+  &__frame{
+    width: 50%;
+    max-height: 600px;
+    max-width: 640px;
+    min-width: 290px;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    &::after{
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__close{
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+  }
+  &__inner{
+    min-height: 100%;
+    width: 100%;
+  }
+  &__bg{
+    background-image: url("../../public/reg-window-bg.webp");
+    background-size: cover;
+    background-position: 50%;
+    height: 100%;
+    width: 100%;
+    flex-basis: 33%;
+  }
+  &__content{
+    flex-grow: 1;
+    padding: 24px 50px;
+    position: relative;
+  }
+  &__back{
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    padding-left: 20px;
+    color: gray;
+    &::before{
+      content: "";
+      background-image: url("../../public/up-arrow.svg");
+      background-size: contain;
+      transform: translateY(-50%) rotate(-90deg) ;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+    }
+  }
+  &__h3{
+    width: 100%;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  &__btn_social{
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  &__gorizont{
+    position: static;
+    gap: 16px;
+  }
+  &__entre{
+    padding-top: 16px;
+  }
+  &__span{
+    color: #595959;
+    padding-right: 5px;
+    display: inline-block;
+  }
+  &__desc{
+    color: #3766a9;
+    display: inline-block;
+    padding-left: 5px;
+    cursor: pointer;
+  }
+  &__recaptcha{
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .popup_registration{
+    &__content{
+      padding: 25px;
+    }
+    &__h3{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &__back{
+      font-size: 14px;
+      &::before{
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .popup_registration{
+    &__bg{
+      display: none;
+    }
+  }
+}

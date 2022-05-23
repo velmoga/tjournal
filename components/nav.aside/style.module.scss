@@ -1,0 +1,103 @@
+.nav_aside{
+  width: 220px;
+  background-color: transparent;
+  height: 93.8vh;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  &__ul{
+    padding: 10px 12px;
+    &__avtive{
+      .nav_aside__li:nth-child(4){
+        & ~ li {
+          display: flex;
+        }
+      }
+    }
+  }
+  &__li{
+    padding: 2px 0;
+    &:nth-child(4){
+      & ~ li {
+        display: none;
+      }
+    }
+  }
+  &__link{
+    height: 44px;
+    padding: 0 13px 4px 13px;
+    transition: background-color .25s ease-in;
+    border-radius: 8px;
+    &:hover{
+      background-color: rgba(255, 255, 255, .6);
+    }
+    &__active{
+      background-color: rgba(255, 255, 255, 1);
+      .nav_aside__path{
+        fill: #e9b649;
+      }
+    }
+  }
+  &__svg{
+    margin-right: 12px;
+  }
+  &__image{
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+    margin-right: 12px;
+    border-radius: 6px;
+    &__news{
+      background-image: url("../../public/news.webp");
+    }
+    &__network{
+      background-image: url("../../public/network.webp");
+    }
+    &__break{
+      background-image: url("../../public/break.webp");
+    }
+    &__history{
+      background-image: url("../../public/history.webp");
+    }
+    &__tehnolegy{
+      background-image: url("../../public/tehnolegy.webp");
+    }
+    &__guest{
+      background-image: url("../../public/guest.webp");
+    }
+  }
+  &__path{
+    fill: #000;
+    transition: fill .25s ease-in;
+  }
+  &__span{
+    font-size: 16px;
+    color: #000;
+  }
+  &__fold{
+    padding: 8px 12px;
+  }
+  &__arrow{
+    margin: 0 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 3px;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -6px;
+      width: 24px;
+      height: 14px;
+      transform: translateY(-50%) rotate(180deg);
+      background-image: url("../../public/up-arrow.svg");
+      background-repeat: no-repeat;
+    }
+    &__active{
+      &::before{
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

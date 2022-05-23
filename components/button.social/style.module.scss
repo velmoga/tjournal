@@ -1,0 +1,83 @@
+.button_social{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), inset 0 0 0 1px rgb(0 0 0 / 6%), inset 0 -1px 0 rgb(0 0 0 / 12%), inset 1px 0 0 rgb(0 0 0 / 6%), inset -1px 0 0 rgb(0 0 0 / 6%);
+  &__static{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__def{
+    height: 48px;
+    width: 48px;
+    .button_social__icon{
+      width: 25px;
+      height: 25px;
+    }
+  }
+  &__fourty{
+    height: 40px;
+    width: 40px;
+    .button_social__icon{
+      width: 25px;
+      height: 25px;
+    }
+  }
+  &__small{
+    flex-grow: 0;
+    height: 33px;
+    width: 33px;
+    .button_social__icon{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__icon{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    &__email{
+      background-image: url("../../public/email.svg");
+    }
+    &__vk{
+      background-image: url("../../public/vk.svg");
+    }
+    &__google{
+      background-image: url("../../public/google.svg");
+    }
+    &__facebook{
+      background-image: url("../../public/facebook.svg");
+    }
+    &__twitter{
+      background-image: url("../../public/twitter.svg");
+    }
+    &__apple{
+      background-image: url("../../public/apple.svg");
+    }
+    &__settings{
+      background-image: url("../../public/settings.svg");
+    }
+    &__static{
+      position: relative;
+      display: inline-block;
+      top: 0;
+      left: 0;
+      transform: translateY(0);
+    }
+  }
+  &__span{
+    font-weight: 500;
+    font-size: 17px;
+    width: 100%;
+    padding: 0 50px;
+  }
+}

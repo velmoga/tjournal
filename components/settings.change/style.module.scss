@@ -1,0 +1,131 @@
+.settings_change{
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px 20px;
+  &__cap_back{
+    padding-bottom: 14px;
+  }
+  &__link{
+    color: gray;
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url('../../public/up-arrow.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: rotate(-90deg);
+    }
+  }
+  &__content{
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  &__basic{
+    position: static;
+    gap: 5px;
+  }
+  &__message{
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  &__black_list{
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  &__pass{
+    cursor: pointer;
+    color: #3766a9;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-bottom: 7px;
+  }
+  &__cap{
+    margin-bottom: 24px;
+    padding: 0 20px;
+  }
+  &__up{
+    position: static;
+  }
+  &__price{
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 90px;
+  }
+  &__price_desc{
+    font-size: 18px;
+    padding-left: 15px;
+  }
+  &__advantage{
+    gap: 16px;
+  }
+  &__h4{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  &__li{
+    position: relative;
+    padding-left: 25px;
+    &::before{
+      content: "";
+      background-image: url("../../public/lock.svg");
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &__btn_filter{
+    max-height: 35px;
+    margin-bottom: 16px;
+  }
+  &__input_filter{
+    width: 100%;
+    padding-right: 12px;
+  }
+  &__reset_span{
+    padding-right: 20px;
+  }
+  &__rest_btn{
+    max-height: 35px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .settings_change{
+    &__black_list{
+      gap: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  .settings_change{
+    &__cap{
+      flex-direction: column;
+    }
+    &__up{
+      flex-direction: column;
+      padding-bottom: 12px;
+    }
+    &__price{
+      text-align: center;
+    }
+    &__price_desc{
+      padding-left: 0;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

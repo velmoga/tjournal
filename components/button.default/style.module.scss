@@ -1,0 +1,60 @@
+.button_default{
+  font-weight: 600;
+  font-size: 17px;
+  padding: 10px 16px 12px 16px;
+  border-radius: 8px;
+  line-height: 1;
+  height: 40px;
+  white-space: nowrap;
+  transition: box-shadow .25s ease-in, background-color .25s ease-in;
+  cursor: pointer;
+  border: none;
+  z-index: 10;
+  &__def{
+    box-shadow: 0 0 2px 1px #000000;
+    background-color: #fff;
+    color: #000;
+    &:hover{
+      box-shadow: 0 0 3px 2px #000000;
+    }
+  }
+  &__blue{
+    background-color: #4683d9;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0 1px 2px rgb(70 131 217 / .5), inset 0 -1px 0 rgb(0 0 0 / .12);
+    &:hover{
+      background-color: #3579d9;
+    }
+  }
+  &__yellow{
+    background: linear-gradient(72.98deg,#f4c560 0,#e9b649 25%,#d1924d 100%);
+    color: #fff;
+    transition: background .25s ease-in;
+    &:hover{
+      background: linear-gradient(72.98deg,#d1924d 0,#e9b649 25%, #f4c560 100%);
+    }
+  }
+  &__disabled{
+    opacity: .7;
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .button_default{
+    position: relative;
+    font-size: 0;
+    padding: 10px 14px 13px 14px;
+    height: 35px;
+    &::before{
+      content: "";
+      font-size: 0;
+      background-image: url('../../public/pencil.svg');
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+    }
+  }
+}
